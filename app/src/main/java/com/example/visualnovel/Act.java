@@ -40,7 +40,7 @@ public class Act {
 
     public void choiseNextAct(int nextScene, Character character){
         int stat = character.getStat();
-        String nedeed = minStat[nextScene];
+        String nedeed = minStat[nextScene-1];
         if ((stat/1000 >= Integer.parseInt(nedeed)/1000) && ((stat/100)%10 >= (Integer.parseInt(nedeed)/100)%10) && ((stat/10)%10 >= (Integer.parseInt(nedeed)/10)%10) && (stat%10 >= Integer.parseInt(nedeed)%10)){
             sceneIndex = nextScene;
         }
@@ -76,9 +76,7 @@ public class Act {
         return sceneIndex;
     }
 
-    public int getCountOfButton(){
+    public int getCountOfButton(){ return choiseScene.getCountOfButton(); }
 
-        return choiseScene.getCountOfButton();
-
-    }
+    public String getChoiseResult(){ return choiseScene.getChoiseResult(sceneIndex-1);}
 }

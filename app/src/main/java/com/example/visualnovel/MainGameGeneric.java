@@ -18,10 +18,10 @@ public class MainGameGeneric {
                 "Вы не помните, как вы сюда попали, но вы испытываете странное ощущение. В голове - как будто чего-то не хватает.",
                 "Вы выбредаете из переулка на оживленные улицы города, пытаясь собрать воедино то, что произошло.",
                 "Перед вами открываются огроный город, с домами уходящими ввысь. И вдруг в вашей голове промелькает воспоминие старого района и его улиц.",
-                "Кажется это лишь фонили нейроимпланты, но даже сердце говорит что оно знает направление к этому месту"},
+                "Кажется это лишь фонили нейроимпланты, но даже сердце говорит что оно знает направление к этому месту..."},
                 new String[]{"s0","s00"}, new int[]{3, -1});
         SceneWithChoise sc0 = new SceneWithChoise("1 - Отправиться по зову сердца и попробовать найти район в окрайне города\n2 - Не обращать внимание на помехи и продвигаться к центру. Там точно будут люди, которые как-то помогут",
-                "sc0",new String[]  {"4060", "0000"});
+                "sc0",new String[]  {"4-260", "0000"});
 
         Scene s01 = new Scene(new String[]{"- Направившись по волю сердца, вы оказывается в заброшенном районе.\n",
                 "Вы решаетесь в него зайти, ибо всё равно альтернатив нет, однако уже проходя мимо домов вам становится хуже и, вас вырубает от сильнейшего удара током...\n",
@@ -38,8 +38,8 @@ public class MainGameGeneric {
 
 
 
-//        Act act10 = new Act("10", new Scene[]{}, sc0, new String[]{});
-//        Act act20 = new Act("20", new Scene[]{}, sc0, new String[]{});
+//        Act act10 = new Act("10", new Scene[]{}, sc, new String[]{});
+//        Act act20 = new Act("20", new Scene[]{}, sc, new String[]{});
 
         StoryLine.put("0", act0);
 //        StoryLine.put("10", act10);
@@ -55,11 +55,7 @@ public class MainGameGeneric {
         return StoryLine.get(storyNow).getImg();
     }
 
-    public int nextText(){
-
-        return StoryLine.get(storyNow).nextText();
-
-    }
+    public int nextText(){ return StoryLine.get(storyNow).nextText(); }
 
     public void nextScene(int numberNext, Character character){
 
@@ -75,4 +71,7 @@ public class MainGameGeneric {
     public int getCountOfButton(){
         return StoryLine.get(storyNow).getCountOfButton();
     }
+
+    public String getChoiseResult() { return StoryLine.get(storyNow).getChoiseResult(); }
+
 }

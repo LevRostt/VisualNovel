@@ -13,34 +13,38 @@ public class Character {
 
     public void setChanges(String changes){ // На вход приходит строка вида RSCM - Rep, Strong, Cyberimplants, Money
         int i = 0;
-        String rep = String.valueOf(changes.charAt(i));
-        i++;
-        if (rep == "-"){
-            rep += String.valueOf(changes.charAt(i));
+        int rm = 2, sm = 2, cm = 2, mm = 2;
+        char rep = changes.charAt(i);
+        if (rep == '-'){
+            rm--;
             i++;
+            rep = changes.charAt(i);
         }
-        String strong = String.valueOf(changes.charAt(i));
         i++;
-        if (strong == "-"){
-            strong += String.valueOf(changes.charAt(i));
+        char strong = changes.charAt(i);
+        if (strong == '-'){
+            sm--;
             i++;
+            strong = changes.charAt(i);
         }
-        String cyberimpl = String.valueOf(changes.charAt(i));
         i++;
-        if (cyberimpl == "-"){
-            cyberimpl += String.valueOf(changes.charAt(i));
+        char cyberimpl = changes.charAt(i);
+        if (cyberimpl == '-'){
+            cm--;
             i++;
+            cyberimpl = changes.charAt(i);
         }
-        String money = String.valueOf(changes.charAt(i));
         i++;
-        if (money == "-"){
-            money += String.valueOf(changes.charAt(i));
+        char money = changes.charAt(i);
+        if (money == '-'){
+            mm--;
             i++;
+            money = changes.charAt(i);
         }
-        this.money += Integer.parseInt(money);
-        this.cyberimplants += Integer.parseInt(cyberimpl);
-        this.strong += Integer.parseInt(strong);
-        this.reputation += Integer.parseInt(rep);
+        this.reputation += (rep-'0')*((int)Math.pow(-1,rm));
+        this.strong += (strong-'0')*((int)Math.pow(-1,sm));
+        this.cyberimplants += (cyberimpl-'0')*((int)Math.pow(-1,cm));
+        this.money += (money-'0')*((int)Math.pow(-1,mm));
     }
 
     public int getReputation() {

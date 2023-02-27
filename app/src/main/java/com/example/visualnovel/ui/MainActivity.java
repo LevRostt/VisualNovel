@@ -49,29 +49,33 @@ public class MainActivity extends AppCompatActivity {
 
             if (mBinding.button2.getVisibility() == View.GONE){
                 status = game.nextText();
+                if (status == -1) {
+                    mBinding.buttonBased.setText("1");
+                    int count = game.getCountOfButton();
+
+                    mBinding.button2.setVisibility(android.view.View.VISIBLE);
+                    if (count == 3){
+                        mBinding.button3.setVisibility(android.view.View.VISIBLE);
+                    }
+                }
+
+                if (status != -1 && status != 0){
+
+                    character.setChanges(game.getChoiseResult());
+                    game.nextAct();
+
+
+                }
+
             }
             else{
                 game.nextScene(1, character);
                 mBinding.button2.setVisibility(android.view.View.GONE);
                 mBinding.button3.setVisibility(android.view.View.GONE);
+                mBinding.buttonBased.setText("Далее...");
             }
 
-            if (status == -1) {
-                mBinding.buttonBased.setText("1");
-                int count = game.getCountOfButton();
-
-                mBinding.button2.setVisibility(android.view.View.VISIBLE);
-                if (count == 3){
-                    mBinding.button3.setVisibility(android.view.View.VISIBLE);
-                }
-            }
             updateScreenInfo();
-
-            if (status != -1 && status != 0){
-
-                game.nextAct();
-
-            }
 
         });
 
@@ -79,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
             game.nextScene(2, character);
             mBinding.button2.setVisibility(android.view.View.GONE);
             mBinding.button3.setVisibility(android.view.View.GONE);
+            mBinding.buttonBased.setText("Далее...");
             updateScreenInfo();
         });
 
@@ -86,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
             game.nextScene(3, character);
             mBinding.button2.setVisibility(android.view.View.GONE);
             mBinding.button3.setVisibility(android.view.View.GONE);
+            mBinding.buttonBased.setText("Далее...");
             updateScreenInfo();
         });
 

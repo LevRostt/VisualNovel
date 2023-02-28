@@ -39,13 +39,12 @@ public class Act {
     }
 
     public void choiseNextAct(int nextScene, Character character){
-        int stat = character.getStat();
         String nedeed = minStat[nextScene-1];
-        if ((stat/1000 >= Integer.parseInt(nedeed)/1000) && ((stat/100)%10 >= (Integer.parseInt(nedeed)/100)%10) && ((stat/10)%10 >= (Integer.parseInt(nedeed)/10)%10) && (stat%10 >= Integer.parseInt(nedeed)%10)){
+        if ((character.getReputation() >= Integer.parseInt(nedeed)/1000) && (character.getStrong() >= (Integer.parseInt(nedeed)/100)%10) && ( character.getCyberimplants() >= (Integer.parseInt(nedeed)/10)%10) && (character.getMoney() >= Integer.parseInt(nedeed)%10)){
             sceneIndex = nextScene;
         }
         else{
-            sceneIndex = minStat.length-1;
+            sceneIndex = minStat.length;
         }
 
     }
@@ -69,11 +68,7 @@ public class Act {
     }
 
     public String getActName(){
-        return getActName();
-    }
-
-    public int getSceneIndex(){
-        return sceneIndex;
+        return actName;
     }
 
     public int getCountOfButton(){ return choiseScene.getCountOfButton(); }

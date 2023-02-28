@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                     int count = game.getCountOfButton();
 
                     mBinding.button2.setVisibility(android.view.View.VISIBLE);
-                    if (count == 3){
+                    if (count >= 3){
                         mBinding.button3.setVisibility(android.view.View.VISIBLE);
                     }
                 }
@@ -63,7 +63,9 @@ public class MainActivity extends AppCompatActivity {
 
                     character.setChanges(game.getChoiseResult());
                     game.nextAct();
-
+                    if (game.getStoryNow() == "00"){
+                        mBinding.buttonBased.setVisibility(android.view.View.GONE);
+                    }
 
                 }
 

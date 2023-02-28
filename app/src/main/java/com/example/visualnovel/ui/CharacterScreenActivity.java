@@ -10,7 +10,7 @@ import com.example.visualnovel.databinding.StartLayoutBinding;
 
 public class CharacterScreenActivity extends AppCompatActivity {
     private StartLayoutBinding mBinding;
-    private int perksCount = 7;
+    private int perksCount = 6;
     private int rep = 1;
     private int strong = 1;
     private int cyberimplants = 1;

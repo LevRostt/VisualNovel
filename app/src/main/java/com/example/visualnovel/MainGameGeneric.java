@@ -330,8 +330,7 @@ public class MainGameGeneric {
     public int nextText(){ return StoryLine.get(storyNow).nextText(); }
 
     public void nextScene(int numberNext, Character character){
-        StoryLine.get(storyNow).choiseNextAct(numberNext,character);
-        numberOfNextAct = numberNext;
+        numberOfNextAct = StoryLine.get(storyNow).choiseNextAct(numberNext,character);
     }
 
     public void nextAct(){

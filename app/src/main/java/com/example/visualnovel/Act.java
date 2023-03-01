@@ -38,7 +38,7 @@ public class Act {
         }
     }
 
-    public void choiseNextAct(int nextScene, Character character){
+    public int choiseNextAct(int nextScene, Character character){
         String nedeed = minStat[nextScene-1];
         if ((character.getReputation() >= Integer.parseInt(nedeed)/1000) && (character.getStrong() >= (Integer.parseInt(nedeed)/100)%10) && ( character.getCyberimplants() >= (Integer.parseInt(nedeed)/10)%10) && (character.getMoney() >= Integer.parseInt(nedeed)%10)){
             sceneIndex = nextScene;
@@ -46,6 +46,7 @@ public class Act {
         else{
             sceneIndex = minStat.length;
         }
+        return sceneIndex;
 
     }
 

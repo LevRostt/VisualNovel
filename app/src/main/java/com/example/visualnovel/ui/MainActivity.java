@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
                 int[] i = data.getIntArrayExtra("Character");
                 Log.d("MyApp","We get information back");
                 character = new Character(i[0],i[1],i[2],i[3]);
-                Log.d("CharacterData",String.valueOf(character.getStat()));
+                //Log.d("CharacterData",String.valueOf(character.getStat()));
         }
         updateScreenInfo();
     }

@@ -63,9 +63,9 @@ public class Character {
         return money;
     }
 
-    public int getStat(){
-        return Integer.parseInt(reputation.toString() + strong.toString() + cyberimplants.toString() + money.toString());
-    }
+//    public int getStat(){
+//        return Integer.parseInt(reputation.toString() + strong.toString() + cyberimplants.toString() + money.toString());
+//    }
 //    public void setReputation(int reputation) {
 //        this.reputation = reputation;
 //    }

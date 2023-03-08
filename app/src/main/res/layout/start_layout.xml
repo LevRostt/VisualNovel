@@ -2,10 +2,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/border_style_up">
+    android:background="@color/darkMidnight">
     <LinearLayout
+        android:background="@drawable/border_style_up"
         android:gravity="center"
-        android:layout_margin="10dp"
+        android:layout_margin="1dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">

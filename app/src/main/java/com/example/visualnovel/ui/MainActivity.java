@@ -7,9 +7,11 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.visualnovel.Character;
 import com.example.visualnovel.MainGameGeneric;
+import com.example.visualnovel.MiniGame;
 import com.example.visualnovel.R;
 import com.example.visualnovel.databinding.GameLayoutBinding;
 
@@ -107,9 +109,12 @@ public class MainActivity extends AppCompatActivity {
                 int[] i = data.getIntArrayExtra("Character");
                 Log.d("MyApp","We get information back");
                 character = new Character(i[0],i[1],i[2],i[3]);
+                updateScreenInfo();
                 //Log.d("CharacterData",String.valueOf(character.getStat()));
+            case 2:
+                int[] resOfGame = data.getIntArrayExtra("res");
+                Toast.makeText(this,String.valueOf(resOfGame[0]),Toast.LENGTH_LONG);
         }
-        updateScreenInfo();
     }
 
     @Override
@@ -117,8 +122,12 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
 //        if (prefs.getBoolean("firstrun", true)){
         if (character == null){
-            Intent i = new Intent(this, CharacterScreenActivity.class);
-            startActivityForResult(i,1 );
+//            Intent game = new Intent(this, MiniGameActivity.class);
+//            startActivityForResult(game, 2);
+
+            Intent creationOfCharacter = new Intent(this, CharacterScreenActivity.class);
+            startActivityForResult(creationOfCharacter,1 );
+
 //            prefs.edit().putBoolean("firstrun", false).commit();
         }
 

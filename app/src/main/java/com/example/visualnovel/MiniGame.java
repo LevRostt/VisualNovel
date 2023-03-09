@@ -4,7 +4,11 @@ public class MiniGame {
     private String[] word = {"1C","BD","55","E9","7A"};
     private String[][] matrix = new String[5][5];
     private MiniGameCombination combination = new MiniGameCombination();
-    private int heal = 1;
+    private int heal = 2; // 0 - dead / 1 - lastChance / 2 - based
+    private int xCoords = 0;
+    private int yCoords = 0;
+    private int orientation = 0; // 0 - Horizontal / 1 - Vertical
+
 
     public MiniGame(){
 
@@ -16,17 +20,88 @@ public class MiniGame {
 
     }
 
+    public int pushCheck(){
+        int code = combination.check(matrix[xCoords][yCoords]);
+        matrix[xCoords][yCoords] = "[-]";
+        if (code == 0){
+            if (heal == 1){
+                heal++;
+            }
+
+            if (combination.getProgress() == combination.length()){
+
+                return 1;
+
+            }
+            else{
+
+                if (orientation == 0){
+                    orientation++;
+                }
+                else{
+                    orientation--;
+                }
+
+                return 0;
+            }
+
+        }
+        else {
+
+            heal--;
+            if (heal == 0){
+
+                return 1;
+
+            }
+            else {
+                if (orientation == 0) {
+                    orientation++;
+                } else {
+                    orientation--;
+                }
+                return 0;
+            }
+        }
+    }
+
     public String getMatrix(int i,int j) {// Возвращает элемент, который нужно вставить в ячейку
         return matrix[i][j];
     }
 
     public int getOrientation(){ // 0 если горизон, 1 если по вертикали
-        return combination.getProgress()%2;
+        return orientation;
     }
 
     public String getCombination(){
         return combination.getStringOfCombnation();
     }
 
+    public void setxCoords(int increase) {
+        this.xCoords += increase;
+        if (this.xCoords < 0){
+            this.xCoords = 4;
+        }
+        if (this.xCoords > 4){
+            this.xCoords = 0;
+        }
+    }
 
+    public void setyCoords(int increase) {
+        this.yCoords += increase;
+        if (this.yCoords < 0){
+            this.yCoords = 4;
+        }
+        if (this.yCoords > 4){
+            this.yCoords = 0;
+        }
+    }
+
+    public int getxCoords() {
+        return xCoords;
+    }
+
+    public int getyCoords() {
+        return yCoords;
+    }
 }

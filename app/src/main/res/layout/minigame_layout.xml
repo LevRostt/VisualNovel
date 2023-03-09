@@ -56,7 +56,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="55"
-                            android:textColor="@color/white"
+                            android:textColor="@color/hack_green"
                             android:textSize="30dp"/>
 
                         <TextView
@@ -65,7 +65,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="55"
-                            android:textColor="@color/white"
+                            android:textColor="@color/hack_green"
                             android:textSize="30dp"/>
 
                         <TextView
@@ -74,7 +74,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="55"
-                            android:textColor="@color/white"
+                            android:textColor="@color/hack_green"
                             android:textSize="30dp"/>
 
                         <TextView
@@ -83,7 +83,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="55"
-                            android:textColor="@color/white"
+                            android:textColor="@color/hack_green"
                             android:textSize="30dp"/>
 
                         <TextView
@@ -92,7 +92,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="55"
-                            android:textColor="@color/white"
+                            android:textColor="@color/hack_green"
                             android:textSize="30dp"/>
 
                     </LinearLayout>
@@ -107,7 +107,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="55"
-                            android:textColor="@color/white"
+                            android:textColor="@color/hack_green"
                             android:textSize="30dp"/>
 
                         <TextView
@@ -116,7 +116,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="55"
-                            android:textColor="@color/white"
+                            android:textColor="@color/hack_green"
                             android:textSize="30dp"/>
 
                         <TextView
@@ -125,7 +125,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="55"
-                            android:textColor="@color/white"
+                            android:textColor="@color/hack_green"
                             android:textSize="30dp"/>
 
                         <TextView
@@ -134,7 +134,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="55"
-                            android:textColor="@color/white"
+                            android:textColor="@color/hack_green"
                             android:textSize="30dp"/>
 
                         <TextView
@@ -143,7 +143,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="55"
-                            android:textColor="@color/white"
+                            android:textColor="@color/hack_green"
                             android:textSize="30dp"/>
 
                     </LinearLayout>
@@ -158,7 +158,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="55"
-                            android:textColor="@color/white"
+                            android:textColor="@color/hack_green"
                             android:textSize="30dp"/>
                         <TextView
                             android:id="@+id/tab21"
@@ -166,7 +166,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="55"
-                            android:textColor="@color/white"
+                            android:textColor="@color/hack_green"
                             android:textSize="30dp"/>
                         <TextView
                             android:id="@+id/tab22"
@@ -174,7 +174,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="55"
-                            android:textColor="@color/white"
+                            android:textColor="@color/hack_green"
                             android:textSize="30dp"/>
                         <TextView
                             android:id="@+id/tab23"
@@ -182,7 +182,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="55"
-                            android:textColor="@color/white"
+                            android:textColor="@color/hack_green"
                             android:textSize="30dp"/>
                         <TextView
                             android:id="@+id/tab24"
@@ -190,7 +190,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="55"
-                            android:textColor="@color/white"
+                            android:textColor="@color/hack_green"
                             android:textSize="30dp"/>
                     </LinearLayout>
 
@@ -205,7 +205,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="55"
-                            android:textColor="@color/white"
+                            android:textColor="@color/hack_green"
                             android:textSize="30dp"/>
                         <TextView
                             android:id="@+id/tab31"
@@ -213,7 +213,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="55"
-                            android:textColor="@color/white"
+                            android:textColor="@color/hack_green"
                             android:textSize="30dp"/>
                         <TextView
                             android:id="@+id/tab32"
@@ -221,7 +221,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="55"
-                            android:textColor="@color/white"
+                            android:textColor="@color/hack_green"
                             android:textSize="30dp"/>
                         <TextView
                             android:id="@+id/tab33"
@@ -229,7 +229,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="55"
-                            android:textColor="@color/white"
+                            android:textColor="@color/hack_green"
                             android:textSize="30dp"/>
                         <TextView
                             android:id="@+id/tab34"
@@ -237,7 +237,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="55"
-                            android:textColor="@color/white"
+                            android:textColor="@color/hack_green"
                             android:textSize="30dp"/>
                     </LinearLayout>
                     <LinearLayout
@@ -251,7 +251,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="55"
-                            android:textColor="@color/white"
+                            android:textColor="@color/hack_green"
                             android:textSize="30dp"/>
                         <TextView
                             android:id="@+id/tab41"
@@ -259,7 +259,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="55"
-                            android:textColor="@color/white"
+                            android:textColor="@color/hack_green"
                             android:textSize="30dp"/>
                         <TextView
                             android:id="@+id/tab42"
@@ -267,7 +267,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="55"
-                            android:textColor="@color/white"
+                            android:textColor="@color/hack_green"
                             android:textSize="30dp"/>
                         <TextView
                             android:id="@+id/tab43"
@@ -275,7 +275,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="55"
-                            android:textColor="@color/white"
+                            android:textColor="@color/hack_green"
                             android:textSize="30dp"/>
                         <TextView
                             android:id="@+id/tab44"
@@ -283,7 +283,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="55"
-                            android:textColor="@color/white"
+                            android:textColor="@color/hack_green"
                             android:textSize="30dp"/>
                     </LinearLayout>
                 </LinearLayout>

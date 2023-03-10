@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">CyberpunkNovel</string>
+    <string name="app_name">Cyberpunk Novel</string>
+    <string name="miniGameTitle">Последовательность для отправки скриптов:</string>
 </resources>

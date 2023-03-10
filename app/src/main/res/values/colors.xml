@@ -12,4 +12,6 @@
     <color name="darkMidnight">#091833</color>
     <color name="purple">#ea00d9</color>
     <color name="body">#d5daa0</color>
+    <color name="hack_green">#d0ed56</color>
+    <color name="hack_green_bg">#272937</color>
 </resources>

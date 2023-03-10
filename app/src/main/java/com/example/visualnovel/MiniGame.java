@@ -4,7 +4,7 @@ public class MiniGame {
     private String[] word = {"1C","BD","55","E9","7A"};
     private String[][] matrix = new String[5][5];
     private MiniGameCombination combination = new MiniGameCombination();
-    private int heal = 2; // 0 - dead / 1 - lastChance / 2 - based
+    private int heal = combination.length()/2 + combination.length()%2; // 0 - dead / 1 - lastChance / 2 - based
     private int xCoords = 0;
     private int yCoords = 0;
     private int orientation = 0; // 0 - Horizontal / 1 - Vertical
@@ -22,15 +22,12 @@ public class MiniGame {
 
     public int pushCheck(){
         int code = combination.check(matrix[xCoords][yCoords]);
-        if (code == -1){
+        if (code == -1 && heal != 1){
             return 0;
         }
         else {
             matrix[xCoords][yCoords] = "[-]";
             if (code == 0) {
-                if (heal == 1) {
-                    heal++;
-                }
 
                 if (combination.getProgress() == combination.length()) {
 
@@ -52,7 +49,7 @@ public class MiniGame {
                 heal--;
                 if (heal == 0) {
 
-                    return 1;
+                    return -1;
 
                 } else {
                     if (orientation == 0) {
@@ -96,6 +93,10 @@ public class MiniGame {
         if (this.yCoords > 4){
             this.yCoords = 0;
         }
+    }
+
+    public int getHeal() {
+        return heal;
     }
 
     public int getxCoords() {

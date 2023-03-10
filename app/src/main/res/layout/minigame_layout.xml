@@ -36,13 +36,15 @@
                 android:textColor="@color/white"/>
 
             <LinearLayout
+                android:orientation="vertical"
                 android:layout_margin="20dp"
                 android:background="@drawable/border_style_def"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <LinearLayout
-                    android:paddingVertical="50dp"
+                    android:paddingTop="30dp"
+                    android:paddingBottom="15dp"
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -363,6 +365,29 @@
                             android:textColor="@color/hack_green"
                             android:textSize="30dp"/>
                     </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+                    <TextView
+                        android:textColor="@color/white"
+                        android:textSize="25dp"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="HP: "/>
+                    <TextView
+                        android:id="@+id/heal"
+                        android:textColor="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="25dp"
+                        android:text="3"/>
+
                 </LinearLayout>
 
             </LinearLayout>

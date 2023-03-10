@@ -46,10 +46,13 @@ public class MiniGameActivity extends AppCompatActivity {
                 vE.setBackgroundColor(getColor(R.color.hack_green_bg));
             }
         }
+
         int resId = getResources().getIdentifier("tab"+x+""+y, "id", getPackageName());
         TextView choisen = findViewById(resId);
         choisen.setBackground(getDrawable(R.drawable.border_choisen));
         mBinding.combination.setText(game.getCombination());
+
+        mBinding.heal.setText(String.valueOf(game.getHeal()));
     }
 
     @Override
@@ -64,13 +67,12 @@ public class MiniGameActivity extends AppCompatActivity {
 
             endOfGame = game.pushCheck();
 
-            if (endOfGame == 0){ // Завершение Активити с каким-либо параметром
+            if (endOfGame == 0){ // Завершение activity с каким-либо параметром
                 if (game.getOrientation() == 0){
                     mBinding.up.setVisibility(android.view.View.GONE);
                     mBinding.down.setVisibility(android.view.View.GONE);
                     mBinding.left.setVisibility(android.view.View.VISIBLE);
                     mBinding.right.setVisibility(android.view.View.VISIBLE);
-                    //редактировать размер кнопки Enter
                 }
                 else{
                     mBinding.up.setVisibility(android.view.View.VISIBLE);

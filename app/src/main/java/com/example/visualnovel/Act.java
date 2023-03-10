@@ -72,7 +72,14 @@ public class Act {
         return actName;
     }
 
-    public int getCountOfButton(){ return choiseScene.getCountOfButton(); }
+    public int getCountOfButton(){
+        if (choiseScene != null) {
+            return choiseScene.getCountOfButton();
+        }
+        else{
+            return 0;
+        }
+    }
 
     public String getChoiseResult(){ return choiseScene.getChoiseResult(sceneIndex-1);}
 }

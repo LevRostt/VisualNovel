@@ -22,45 +22,46 @@ public class MiniGame {
 
     public int pushCheck(){
         int code = combination.check(matrix[xCoords][yCoords]);
-        matrix[xCoords][yCoords] = "[-]";
-        if (code == 0){
-            if (heal == 1){
-                heal++;
-            }
-
-            if (combination.getProgress() == combination.length()){
-
-                return 1;
-
-            }
-            else{
-
-                if (orientation == 0){
-                    orientation++;
-                }
-                else{
-                    orientation--;
-                }
-
-                return 0;
-            }
-
+        if (code == -1){
+            return 0;
         }
         else {
-
-            heal--;
-            if (heal == 0){
-
-                return 1;
-
-            }
-            else {
-                if (orientation == 0) {
-                    orientation++;
-                } else {
-                    orientation--;
+            matrix[xCoords][yCoords] = "[-]";
+            if (code == 0) {
+                if (heal == 1) {
+                    heal++;
                 }
-                return 0;
+
+                if (combination.getProgress() == combination.length()) {
+
+                    return 1;
+
+                } else {
+
+                    if (orientation == 0) {
+                        orientation++;
+                    } else {
+                        orientation--;
+                    }
+
+                    return 0;
+                }
+
+            } else {
+
+                heal--;
+                if (heal == 0) {
+
+                    return 1;
+
+                } else {
+                    if (orientation == 0) {
+                        orientation++;
+                    } else {
+                        orientation--;
+                    }
+                    return 0;
+                }
             }
         }
     }

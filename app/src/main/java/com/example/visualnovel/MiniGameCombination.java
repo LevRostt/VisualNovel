@@ -29,14 +29,18 @@ public class MiniGameCombination {
         return progress;
     }
 
-    public int check(String comb){// Принимает элемент для сравнения, возвращает 0, если подходит 1, если не подходит
-        if (comb == combination[progress]){
+    public int check(String comb) {// Принимает элемент для сравнения, возвращает 0, если подходит ||  1, если не подходит || -1, Если ничего
+        if (comb == combination[progress]) {
             combination[progress] = "--";
             progress++;
             return 0;
-        }
-        else{
+        } else if (comb == "[-]") {
+
+            return -1;
+
+        } else {
             return 1;
         }
+
     }
 }

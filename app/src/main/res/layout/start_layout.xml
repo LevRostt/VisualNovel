@@ -62,14 +62,14 @@
             <Button
                 android:id="@+id/repButton"
                 android:layout_margin="10dp"
-                android:layout_width="180dp"
+                android:layout_width="160dp"
                 android:layout_height="wrap_content"
                 android:text="Reputation"/>
 
             <Button
                 android:id="@+id/strongButton"
                 android:layout_margin="10dp"
-                android:layout_width="180dp"
+                android:layout_width="160dp"
                 android:layout_height="wrap_content"
                 android:text="Strong"/>
         </LinearLayout>
@@ -117,14 +117,14 @@
             <Button
                 android:id="@+id/cyberimplButton"
                 android:layout_margin="10dp"
-                android:layout_width="180dp"
+                android:layout_width="160dp"
                 android:layout_height="wrap_content"
                 android:text="Cyberimplants"/>
 
             <Button
                 android:id="@+id/moneyButton"
                 android:layout_margin="10dp"
-                android:layout_width="180dp"
+                android:layout_width="160dp"
                 android:layout_height="wrap_content"
                 android:text="Money"/>
 
@@ -141,7 +141,7 @@
                 android:id="@+id/perksCount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="7"
+                android:text="6"
                 android:textSize="30dp"/>
             <TextView
                 android:textColor="@color/white"

@@ -32,6 +32,23 @@ public class MainActivity extends AppCompatActivity {
         mBinding.mainText.setText(game.getText());
     }
 
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        super.onActivityResult(requestCode, resultCode, data);
+        switch (resultCode){
+            case 1:
+                int[] i = data.getIntArrayExtra("Character");
+                Log.d("MyApp","We get information back");
+                character = new Character(i[0],i[1],i[2],i[3]);
+                updateScreenInfo();
+                //Log.d("CharacterData",String.valueOf(character.getStat()));
+                break;
+            case 2:
+                int resOfGame = data.getIntExtra("res", -1);
+                Toast.makeText(this,String.valueOf(resOfGame),Toast.LENGTH_LONG).show();
+                break;
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +56,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(mBinding.getRoot());
 //        prefs = getSharedPreferences("com.example.visualnovel", MODE_PRIVATE);
 
+
+        if (character == null){ //Первый вход в игру
+
+//            Intent game = new Intent(this, MiniGameActivity.class);
+//            startActivityForResult(game, 2);
+
+            Intent creationOfCharacter = new Intent(this, CharacterScreenActivity.class);
+            startActivityForResult(creationOfCharacter,1 );
+
+//            prefs.edit().putBoolean("firstrun", false).commit();
+        }
 
 
         //Написани логики объединения интерфейса и классов
@@ -102,35 +130,13 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    protected void onActivityResult(int requestCode, int resultCode, Intent data){
-        super.onActivityResult(requestCode, resultCode, data);
-        switch (resultCode){
-            case 1:
-                int[] i = data.getIntArrayExtra("Character");
-                Log.d("MyApp","We get information back");
-                character = new Character(i[0],i[1],i[2],i[3]);
-                updateScreenInfo();
-                //Log.d("CharacterData",String.valueOf(character.getStat()));
-            case 2:
-                int[] resOfGame = data.getIntArrayExtra("res");
-                Toast.makeText(this,String.valueOf(resOfGame[0]),Toast.LENGTH_LONG);
-        }
-    }
 
-    @Override
-    protected void onResume(){
-        super.onResume();
-//        if (prefs.getBoolean("firstrun", true)){
-        if (character == null){
-//            Intent game = new Intent(this, MiniGameActivity.class);
-//            startActivityForResult(game, 2);
-
-            Intent creationOfCharacter = new Intent(this, CharacterScreenActivity.class);
-            startActivityForResult(creationOfCharacter,1 );
-
-//            prefs.edit().putBoolean("firstrun", false).commit();
-        }
-
-    }
+//    @Override
+//    protected void onResume(){
+//        super.onResume();
+////        if (prefs.getBoolean("firstrun", true)){
+//
+//
+//    }
 
 }

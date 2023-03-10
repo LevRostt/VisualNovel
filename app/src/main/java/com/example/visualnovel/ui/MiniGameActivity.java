@@ -64,12 +64,13 @@ public class MiniGameActivity extends AppCompatActivity {
 
             endOfGame = game.pushCheck();
 
-            if (endOfGame == 0){
+            if (endOfGame == 0){ // Завершение Активити с каким-либо параметром
                 if (game.getOrientation() == 0){
                     mBinding.up.setVisibility(android.view.View.GONE);
                     mBinding.down.setVisibility(android.view.View.GONE);
                     mBinding.left.setVisibility(android.view.View.VISIBLE);
                     mBinding.right.setVisibility(android.view.View.VISIBLE);
+                    //редактировать размер кнопки Enter
                 }
                 else{
                     mBinding.up.setVisibility(android.view.View.VISIBLE);

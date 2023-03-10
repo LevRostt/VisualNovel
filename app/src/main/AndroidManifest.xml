@@ -39,6 +39,12 @@
             android:name=".ui.MiniGameActivity"
             android:label="MiniGameActivity">
         </activity>
+
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".ui.ChoiseScreenActivity"
+            android:label="MiniGameActivity">
+        </activity>
     </application>
 
 </manifest>

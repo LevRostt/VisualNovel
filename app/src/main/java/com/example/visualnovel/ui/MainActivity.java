@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case 2: //MiniGameRes
                 int resOfGame = data.getIntExtra("res", -1); // 0 - поражение | 1 - победа
-                Toast.makeText(this,String.valueOf(resOfGame),Toast.LENGTH_LONG).show();
+                //Toast.makeText(this,String.valueOf(resOfGame),Toast.LENGTH_LONG).show();
                 if (resOfGame == 0){
                     game.setNextAct("0");
                 }
@@ -83,8 +83,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(mBinding.getRoot());
 //        prefs = getSharedPreferences("com.example.visualnovel", MODE_PRIVATE);
 
-        //Написани логики объединения интерфейса и классов
-        game = new MainGameGeneric(character);
+        Intent i = new Intent(this, ChoiseScreenActivity.class);
+        startActivity(i);
+
+        game = new MainGameGeneric(character); //Создаём историю
 
 
         mBinding.buttonBased.setOnClickListener(View -> {

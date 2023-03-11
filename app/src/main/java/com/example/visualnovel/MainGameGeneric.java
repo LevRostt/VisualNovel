@@ -37,7 +37,12 @@ public class MainGameGeneric {
                 new String[]{"s01", "s010" ,"s011"}, new int[]{3, 5,-1});
 
         Scene s02 = new Scene(new String[]{"Блуждая по городу, вы натыкаетесь на группу уличных головорезов, которые угрожают вас ограбить.\n",
-                "Вы можете либо бороться с ними, либо отдать им свои деньги."},new String[]{"s02"}, new int[]{-1});
+                "Вы можете либо бороться с ними, либо отдать им свои деньги.",
+                "\"Да какой сдаваться\" - промелькает у вас в голове",
+                "Один из них достаёт двухстволку и она оказывается прямо перед вашим лицом",
+                "...",
+                "*Оглушительный выстрел*",
+                "Ваша безрассудочность вас же и подвела"},new String[]{"s02"}, new int[]{-1});
 
         //---- act0
 
@@ -128,6 +133,7 @@ public class MainGameGeneric {
                 "«Ебать, ещё чего?...».",
                 "Кажется это было последнее что вы смогли сказать.",
                 "Свет погас, а ноги подкосились.",
+                "В голове пролетел оглушающий свист...",
                 "Вы потеряли сознание…"}, new String[]{"s210", "black"}, new int[]{5,-1});
 
 
@@ -312,11 +318,11 @@ public class MainGameGeneric {
         Act act10 = new Act("10", new Scene[]{s10,s11,s12}, sc10, new String[]{"0300", "0000"});
         Act act110 = new Act("110", new Scene[]{s110,s111,s112}, sc110, new String[]{"0000", "0000"});
         Act act210 = new Act("210", new Scene[]{s210,s211,s212}, sc210, new String[]{"0000", "0000"});
-        Act act1210 = new Act("1210", new Scene[]{s1210,s1211,s1212}, sc1210, new String[]{"0003", "1000"});
+        Act act1210 = new Act("1210", new Scene[]{s1210,s1211,s1212}, sc1210, new String[]{"3003", "0000"});
         Act act11210 = new Act("11210", new Scene[]{s21210,s21211,s21212},sc21210, new String[]{"0000", "0000"}); // act 11210 = act 21210
         Act act21210 = new Act("21210", new Scene[]{s21210,s21211,s21212},sc21210, new String[]{"0000", "0000"});
-        Act act111210 = new Act("111210", new Scene[]{s121210,s121211,s121212, s121213, s121214},sc121210, new String[]{"0700", "0090", "0000", "0000"});
-        Act act121210 = new Act("121210", new Scene[]{s121210,s121211,s121212, s121213, s121214},sc121210, new String[]{"0700", "0090", "0000", "0000"});
+//        Act act111210 = new Act("111210", new Scene[]{s121210,s121211,s121212, s121213, s121214},sc121210, new String[]{"0700", "0090", "0000", "0000"});
+//        Act act121210 = new Act("121210", new Scene[]{s121210,s121211,s121212, s121213, s121214},sc121210, new String[]{"0700", "0090", "0000", "0000"});
         Act act211210 = new Act("211210", new Scene[]{s121210,s121211,s121212, s121213, s121214},sc121210, new String[]{"0700", "0090", "0000", "0000"});
         Act act221210 = new Act("221210", new Scene[]{s121210,s121211,s121212, s121213, s121214},sc121210, new String[]{"0700", "0090", "0000", "0000"});
 
@@ -330,8 +336,8 @@ public class MainGameGeneric {
         StoryLine.put(act1210.getActName(), act1210);
         StoryLine.put(act11210.getActName(), act11210);
         StoryLine.put(act21210.getActName(), act21210);
-        StoryLine.put(act111210.getActName(), act111210);
-        StoryLine.put(act121210.getActName(), act121210);
+//        StoryLine.put(act111210.getActName(), act111210);
+//        StoryLine.put(act121210.getActName(), act121210);
         StoryLine.put(act211210.getActName(), act211210);
         StoryLine.put(act221210.getActName(), act221210);
 

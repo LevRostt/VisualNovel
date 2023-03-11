@@ -17,7 +17,7 @@ public class MiniGameCombination {
         return len;
     }
 
-    public String getStringOfCombnation(){
+    public String getStringOfCombination(){
         String string = "";
         for (int i = 0; i < len; i++){
             string += combination[i] + " ";

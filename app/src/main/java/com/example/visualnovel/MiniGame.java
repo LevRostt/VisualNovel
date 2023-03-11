@@ -72,7 +72,7 @@ public class MiniGame {
     }
 
     public String getCombination(){
-        return combination.getStringOfCombnation();
+        return combination.getStringOfCombination();
     }
 
     public void setxCoords(int increase) {
